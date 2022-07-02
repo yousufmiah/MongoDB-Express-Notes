@@ -1,7 +1,9 @@
 # MongoDB-Express-Notes
 
 
-# get() Method
+### get() Method
+
+`Server side code`
 
 ```javascript
 app.get("/service", async (req, res) => {
