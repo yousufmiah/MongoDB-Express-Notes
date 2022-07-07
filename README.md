@@ -283,7 +283,7 @@ res.send(result);
 `or server site`
 
 ```js
-  update item
+  
     app.put("/item/:id", async (red, res) => {
       // console.log(req.params)
       const id = red.params.id;
