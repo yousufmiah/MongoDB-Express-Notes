@@ -280,6 +280,29 @@ res.send(result);
     });
 ```
 
+`or server site`
+
+```js
+  update item
+    app.put("/item/:id", async (red, res) => {
+      // console.log(req.params)
+      const id = red.params.id;
+      const updatedItem = req.body;
+      // console.log(updateItem)
+      const filter = { _id: ObjectId(id) };
+      const options = { upsert: true };
+      const updateDoc = {
+        $set: updatedItem,
+      };
+      const result = await itemsCollection.updateOne(
+        filter,
+        options,
+        updateDoc
+      );
+      res.send(result);
+    });
+```
+
 `Client Site Code`
 
 ```Js
